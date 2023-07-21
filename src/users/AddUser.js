@@ -20,7 +20,7 @@ const AddUser = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:8080/user", user);
+    await axios.post("http://16.170.196.198:8080/user", user);
     navigate("/");
   };
 

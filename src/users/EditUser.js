@@ -27,12 +27,12 @@ const EditUser = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.put(`http://localhost:8080/user/${id}`, user);
+    await axios.put(`http://16.170.196.198:8080/user/${id}`, user);
     navigate("/");
   };
 
   const loadUser = async() => {
-    const result = await axios.get(`http://localhost:8080/user/${id}`);
+    const result = await axios.get(`http://16.170.196.198:8080/user/${id}`);
     setUser(result.data);
   }
 

@@ -10,13 +10,13 @@ const Home = () => {
   }, []);
 
   const loadUsers = async () => {
-    const result = await axios.get("http://localhost:8080/users");
+    const result = await axios.get("http://16.170.196.198:8080/users");
     setUsers(result.data);
     // console.log(result.data);
   };
 
   const deleteUser = async(id) => {
-    await axios.delete(`http://localhost:8080/user/${id}`);
+    await axios.delete(`http://16.170.196.198:8080/user/${id}`);
     loadUsers();
   };
 
